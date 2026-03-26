@@ -102,7 +102,7 @@ proc watchdogThreadBody(ctx: ptr FFIContext) {.thread.} =
 
   let watchdogRun = proc(ctx: ptr FFIContext) {.async.} =
     const WatchdogStartDelay = 10.seconds
-    const WatchdogTimeinterval = 1.seconds
+    const WatchdogTimeinterval = 9999.seconds
     const WatchdogTimeout = 20.seconds
 
     # Give time for the node to be created and up before sending watchdog requests
